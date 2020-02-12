@@ -5,7 +5,7 @@
 2. Hook.php, который обрабатывает WebHook и запускает bash скрипт 
 ```php
 <?php
-// WebHook GitHub
+// read POST JSON WebHook GitHub
 $data = json_decode(file_get_contents('php://input'), true);
 $repo = './'.$data['repository']['name'];
 
