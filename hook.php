@@ -1,19 +1,13 @@
 <?php
+//TODO chech branch, source
 
-$postData = file_get_contents('php://input');
-$data = json_decode($postData, true);
+// WebHook GitHub
+$data = json_decode(file_get_contents('php://input'), true);
+$repo = './'.$data['repository']['name'];
 
-$repo = $data['repository']['name'];
-
+// variable $repo for bash
 putenv("repo=$repo");
 
-exec("bash /home/hosting_dbasalaev/projects/app-bitrix24/htdocs/update.sh", $output);
-
-$log .= '$data'."\n";
-$log .= print_r($data, 1) . "\n";
-$log .= '$repo'."\n";
-$log .= print_r($repo, 1) . "\n";
-$log .= '$output'."\n";
-$log .= print_r($output, 1) . "\n";
-$log .= "\n------------------------\n";
-file_put_contents(getcwd() . '/log.log', $log, FILE_APPEND);
+//execute update.sh
+exec("bash ./update.sh");
+ ?>
