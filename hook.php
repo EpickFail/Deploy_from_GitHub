@@ -1,5 +1,5 @@
 <?php
-//TODO chech branch, source
+//TODO check branch, source
 
 // WebHook GitHub
 $data = json_decode(file_get_contents('php://input'), true);
