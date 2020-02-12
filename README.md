@@ -4,7 +4,6 @@
 1. Настроить [WebHook](https://developer.github.com/webhooks/creating/) на GitHub в нужном репозитории
 2. Hook.php, который обрабатывает WebHook и запускает bash скрипт 
 ```php
-<?php
 // read POST JSON WebHook GitHub
 $data = json_decode(file_get_contents('php://input'), true);
 $repo = './'.$data['repository']['name'];
@@ -14,7 +13,6 @@ putenv("repo=$repo");
 
 //execute update.sh
 exec("bash ./update.sh");
- ?>
 ```
 Скрипт без проверки источника и веток, в дальнейшем надо будет добавить.
 
