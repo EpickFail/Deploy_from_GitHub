@@ -1,7 +1,7 @@
 <?php
 //TODO check branch, source
 
-// WebHook GitHub
+// read POST Json WebHook GitHub
 $data = json_decode(file_get_contents('php://input'), true);
 $repo = './'.$data['repository']['name'];
 
