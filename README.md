@@ -1,6 +1,6 @@
 # Deploy from GitHub
 
-Для настройки авто деплоя с GitHub на свой сервер необходимо: 
+Для авто деплоя с GitHub на свой сервер необходимо: 
 1. Настроить [WebHook](https://developer.github.com/webhooks/creating/) на GitHub в нужном репозитории
 2. Hook.php, который обрабатывает WebHook и запускает bash скрипт 
 ```php
