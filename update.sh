@@ -1,3 +1,3 @@
 #!/bin/bash
-cd "/home/hosting_dbasalaev/projects/app-bitrix24/htdocs/"$repo
+cd $repo
 git pull
